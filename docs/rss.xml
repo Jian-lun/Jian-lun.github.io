@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Jianlun's blog</title><link>https://Jian-lun.github.io</link><description>梦兰的博客</description><copyright>Jianlun's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/157687961?v=4&amp;size=64</url><title>avatar</title><link>https://Jian-lun.github.io</link></image><lastBuildDate>Sun, 01 Sep 2024 14:53:23 +0000</lastBuildDate><managingEditor>Jianlun's blog</managingEditor><ttl>60</ttl><webMaster>Jianlun's blog</webMaster><item><title>安卓开发 防一键去除签名校验</title><link>https://Jian-lun.github.io/post/an-zhuo-kai-fa-%20-fang-yi-jian-qu-chu-qian-ming-xiao-yan.html</link><description>```java&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Jianlun's blog</title><link>https://Jian-lun.github.io</link><description>梦兰的博客</description><copyright>Jianlun's blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/157687961?v=4&amp;size=64</url><title>avatar</title><link>https://Jian-lun.github.io</link></image><lastBuildDate>Sun, 01 Sep 2024 15:20:08 +0000</lastBuildDate><managingEditor>Jianlun's blog</managingEditor><ttl>60</ttl><webMaster>Jianlun's blog</webMaster><item><title>安卓开发 常用的签名校验</title><link>https://Jian-lun.github.io/post/an-zhuo-kai-fa-%20-chang-yong-de-qian-ming-xiao-yan.html</link><description>&#13;
+**第一种**&#13;
+```java&#13;
+ @SuppressLint('PackageManagerGetSignatures') Signature[] signatures = getPackageManager().getPackageInfo(getPackageName(),&#13;
+                    PackageManager.GET_SIGNATURES).signatures;&#13;
+            this.signature = signatures[0].toCharsString();&#13;
+            this.signHash = signature.hashCode() + '';&#13;
+//            Log.i(TAG, 'signature==&gt;' + this.signature + '\n');&#13;
+//            Log.i(TAG, 'signHash==&gt;' + this.signHash + '\n');&#13;
+            //Log.i(TAG,'sign==&gt;'+sign+'...\n');&#13;
+            //308202e4308201cc020101300d06092a864886f70d01010&#13;
+            // Log.i(TAG, 'sign2CharsString==&gt;' + sign.toCharsString() + '\n');&#13;
+        } catch (Exception e) {&#13;
+            e.printStackTrace();&#13;
+        }&#13;
+    }&#13;
+```。</description><guid isPermaLink="true">https://Jian-lun.github.io/post/an-zhuo-kai-fa-%20-chang-yong-de-qian-ming-xiao-yan.html</guid><pubDate>Sun, 01 Sep 2024 15:19:44 +0000</pubDate></item><item><title>安卓开发 防一键去除签名校验</title><link>https://Jian-lun.github.io/post/an-zhuo-kai-fa-%20-fang-yi-jian-qu-chu-qian-ming-xiao-yan.html</link><description>```java&#13;
 &#13;
 import android.annotation.*;&#13;
 import android.app.*;&#13;
